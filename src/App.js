@@ -1,11 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './MyComponents/Header';
 import { AddTodo } from './MyComponents/AddTodo';
 import { Todos } from './MyComponents/Todos';
 import { Footer } from './MyComponents/Footer';
-import { About } from './MyComponents/About';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
     BrowserRouter as Router,
     Switch,
@@ -26,7 +24,7 @@ function App() {
     const onDelete = (todo) => {
         setTodos(
             todos.filter((e) => {
-                return e != todo;
+                return e !== todo;
             })
         )
     }
